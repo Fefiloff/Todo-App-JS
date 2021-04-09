@@ -1,0 +1,112 @@
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0px;
+}
+
+body {
+  background-color: #f5f5f5;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding-top: 150px;
+  height: 600px;
+  text-align: center;
+  font-family: "Ubuntu Mono", monospace;
+}
+
+/* Logo */
+.material-icons.md-48 {
+  font-size: 48px;
+  padding-bottom: 25px;
+  color: tomato;
+}
+
+.done {
+  text-decoration-line: line-through;
+}
+
+input[type="text"] {
+  margin-top: 25px;
+  font-size: 18px;
+  padding: 15px;
+  border: none;
+  border-radius: 12px;
+}
+
+#todoInput {
+  width: 500px;
+}
+
+#todoInput:focus {
+  box-shadow: 1px 0px 15px rgba(231, 69, 69, 0.5);
+  transition: all 0.25s ease-in-out 0s;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+#todolist {
+  max-width: 540px;
+  margin: auto;
+  text-align: left;
+  padding-top: 15px;
+  list-style-type: none;
+  padding-inline-start: 0px;
+}
+
+li {
+  padding: 10px 0 10px 0px;
+  font-size: 18px;
+  /* font-family: "Ubuntu Mono", monospace; */
+}
+
+#addButton {
+  margin-left: 10px;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  width: 48px;
+  height: 48px;
+  background-color: tomato;
+  border-radius: 35px;
+  cursor: pointer;
+  outline: none;
+}
+
+#addButton:hover {
+  box-shadow: 1px 0px 15px rgba(231, 69, 69, 0.5);
+  transition: all 0.25s ease-in-out 0s;
+}
+
+/*** custom checkboxes ***/
+input[type="checkbox"] {
+  display: none;
+} /* to hide the checkbox itself */
+input[type="checkbox"] + label:before {
+  font-family: FontAwesome;
+  display: inline-block;
+}
+
+input[type="checkbox"] + label:before {
+  content: "\f096";
+} /* unchecked icon */
+input[type="checkbox"] + label:before {
+  letter-spacing: 10px;
+} /* space between checkbox and label */
+
+input[type="checkbox"]:checked + label:before {
+  content: "\f046";
+} /* checked icon */
+input[type="checkbox"]:checked + label:before {
+  letter-spacing: 5px;
+} /* allow space for check mark */
